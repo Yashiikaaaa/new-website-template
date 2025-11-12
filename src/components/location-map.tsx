@@ -89,7 +89,7 @@ export default function LocationMap() {
 
   return (
     <section id="location" className="py-12 md:py-20 bg-[#F7F1F7]">
-      <div className="max-w-[366px] md:max-w-7xl mx-auto">
+      <div className="max-w-[366px] md:max-w-7xl px-4 md:px-0 md:mx-auto">
         <div className="mb-8 md:mb-12">
           <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-Urbanist">
             Location & Connectivity
@@ -103,20 +103,30 @@ export default function LocationMap() {
           {/* Map */}
           <div className="relative rounded-lg overflow-hidden shadow-lg w-full">
             <div className="relative h-[280px] sm:h-[350px] md:h-[500px] bg-neutral-200">
-              <img
+              {/* <img
                 src="/map-showing-location-connectivity-roads-highways.jpg"
                 alt="Location Map"
                 className="w-full h-full object-cover scale-115"
+              /> */}
+              <iframe
+                title="Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7632002391947!2d77.62135517592381!3d13.05073938727197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d1f399b41f%3A0x9e6211cae3335ba3!2sLodha%20Mirabelle!5e0!3m2!1sen!2sin!4v1762931555095!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
               {/* Explore Button on Map */}
-              <button className="absolute bottom-4 md:bottom-6 right-4 md:right-6 bg-primary hover:bg-[#9a1751] text-white px-5 md:px-8 py-2 md:py-3 rounded-md font-semibold font-Urbanist text-sm md:text-[14px] transition-colors duration-300 shadow-lg">
+              {/* <button className="absolute bottom-4 md:bottom-6 right-4 md:right-6 bg-primary hover:bg-[#9a1751] text-white px-5 md:px-8 py-2 md:py-3 rounded-md font-semibold font-Urbanist text-sm md:text-[14px] transition-colors duration-300 shadow-lg">
                 Explore
-              </button>
+              </button> */}
             </div>
           </div>
 
           {/* Category Tabs and Details */}
-          <div className="w-full h-full">
+          <div className="w-[380px] md:w-full overflow-x-auto h-full">
             {/* Category Buttons */}
             <div className="flex overflow-x-auto gap-2 md:gap-3 mb-6 md:mb-8 pb-2 scrollbar-hide snap-x snap-mandatory">
               {categories.map((category) => (
@@ -140,7 +150,7 @@ export default function LocationMap() {
             </div>
 
             {/* Location List */}
-            <div className="space-y-2 md:space-y-3 bg-white rounded-lg p-4 md:p-6 border border-gray-200 shadow-sm h-[55vh]">
+            <div className="space-y-2 md:space-y-3 bg-white rounded-lg p-4 md:p-6 border border-gray-200 shadow-sm md:h-[55vh]">
               {locationData[activeCategory]?.map((location, index) => (
                 <div
                   key={index}

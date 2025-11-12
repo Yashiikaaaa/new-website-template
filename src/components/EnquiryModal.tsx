@@ -22,7 +22,7 @@ export default function EnquiryModal({
 }: EnquiryModalProps) {
 
      // initialize GA (client-side only)
-  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? ""
+  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-3J8R39GCCX"
   useEffect(() => {
     if (GA_MEASUREMENT_ID) {
       ReactGA.initialize(GA_MEASUREMENT_ID)

@@ -50,6 +50,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-N2F9R3DQ');`,
           }}
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J8R39GCCX"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){ window.dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'G-3J8R39GCCX');
+`,
+          }}
+        />
       </head>
       <body className={inter.className}>
         <noscript>
@@ -60,6 +71,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+      
+
 
         {children}
       </body>
