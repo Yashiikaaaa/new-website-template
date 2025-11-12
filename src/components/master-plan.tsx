@@ -18,10 +18,10 @@ export default function MasterPlan() {
               Strategically located for seamless connectivity to all major landmarks
             </p>
           </div>
-          <button className="bg-primary hover:bg-[#9a1751] hidden md:block text-white px-6 md:px-8 py-3 rounded-[4px] font-semibold font-Urbanist text-sm md:text-base transition-colors duration-300 shadow-md flex items-center gap-2 whitespace-nowrap cursor-pointer"
+          <button className="bg-primary hover:bg-[#9a1751] hidden md:flex text-white px-6 md:px-8 py-3 rounded-[4px] font-semibold font-Urbanist text-sm md:text-base transition-colors duration-300 shadow-md items-center gap-2 whitespace-nowrap cursor-pointer"
             onClick={() => setIsModalOpen(true)}
           >
-            <img src={'/download.svg'} className='w-5 h-5 object-contain'/>
+            <img src={'/download.svg'} className='w-5 h-5'/>
             Download Brochure
           </button>
         </div>
@@ -34,7 +34,7 @@ export default function MasterPlan() {
             className="w-full h-full object-cover"
           />
         </div>
-        <button className="bg-primary hover:bg-[#9a1751] md:hidden text-white mt-4.5 px-6 md:px-8 py-3 rounded-[4px] font-semibold font-Urbanist text-sm md:text-base transition-colors duration-300 shadow-md flex flx-row items-center gap-2 whitespace-nowrap cursor-pointer"
+        <button className="bg-primary hover:bg-[#9a1751] md:hidden text-white mt-4.5 px-6 md:px-8 py-3 rounded-[4px] font-semibold font-Urbanist text-sm md:text-base transition-colors duration-300 shadow-md flex flex-row items-center gap-2 whitespace-nowrap cursor-pointer"
             onClick={() => setIsModalOpen(true)}
           >
             <img src={'/download.svg'} className='w-5 h-5 object-contain'/>
