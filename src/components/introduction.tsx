@@ -1,0 +1,97 @@
+
+'use client'
+import EnquiryModal from "@/components/EnquiryModal"
+import { useState } from "react";
+
+export default function Introduction() {
+  const [isModalOpen, setIsModalOpen] =  useState(false);
+  const [title, setTitle] = useState("Download Brochure");
+  return (
+    <>
+    <section className="py-12 md:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid md:grid-cols-2  lg:gap-12 items-center">
+          {/* Images */}
+          <div className="relative h-[500px] md:h-[600px] hidden md:block">
+            {/* Top Left Image - Aerial View */}
+            <div className="absolute top-0 left-0 w-[80%] h-[80%] z-10">
+              <img
+                src="/godrej-project-aerial-view-green-landscape.jpg"
+                alt="Godrej Aerial View"
+                className="w-full h-full object-cover rounded-sm shadow-lg"
+              />
+            </div>
+            
+            {/* Bottom Right Image - Residential Building */}
+            <div className="absolute bottom-0 right-0 w-[55%] h-[50%] z-20">
+              <img
+                src="/godrej-modern-residential-building-architecture.jpg"
+                alt="Godrej Residential Building"
+                className="w-full h-full object-cover rounded-sm shadow-xl"
+              />
+            </div>
+          </div>
+
+          {/* Content */}
+          <div>
+            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold mb-6 text-[#221628] font-Urbanist">
+              Introducing the Godrej
+            </h2>
+            
+            <p className="text-[#575556] mb-4 leading-relaxed text-sm md:text-md font-Urbanist">
+              For over 125 years, Godrej has been synonymous with trust, quality, and innovation. As one of India's most respected conglomerates, we bring the same commitment to excellence in creating homes that inspire and endure.With a total of around 500 plots across 50 acres, Godrej Plots Doddaballapur offers premium villa plots in North Bangalore, ranging from approximately 1200 to 4000 sq. ft.
+            </p>
+            
+            <p className="text-[#575556] mb-8 leading-relaxed text-sm md:text-md font-Urbanist">
+              The development features a gated community with luxury amenities like a clubhouse, swimming pool, and fitness center, as well as sustainable elements such as rainwater harvesting.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex gap-[11px] md:gap-4 flex-row mb-8 w-full justify-between py-2.5 font-Urbanist">
+              <button className="bg-primary text-md  text-white px-8 py-3 rounded-sm font-semibold transition-colors flex items-center gap-1 md:gap-2 shadow-md cursor-pointer  md:min-w-[290px]"
+                onClick={()=>{setIsModalOpen(true)
+                  setTitle("Download Brochure")
+                }}>
+                <img src="/download.svg" alt="Brochure Icon" className="w-4 h-4" />
+                Download Brochure
+              </button>
+              <button className="border text-md border-primary text-primary px-8 py-3 rounded-sm font-semibold transition-colors flex items-center gap-1 md:gap-2 cursor-pointer   md:min-w-[290px]"
+                  onClick={()=>{setIsModalOpen(true)
+                  setTitle("Virtual Tour")
+                  }}  >
+                <img src="/camera.svg" alt="Virtual Tour Icon" className="w-4.5 h-4.5" />
+                Virtual Tour
+              </button>
+            </div>
+
+            <div  className='border mb-8'/>
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 font-Urbanist">
+              <div className="text-center">
+                <p className="text-lg md:text-[42px] font-bold text-gray-900 mb-2">125+</p>
+                <p className="text-md text-[#575556]">Years of Legacy</p>
+              </div>
+              <div className="text-center">
+                <p className="text-lg md:text-[42px] font-bold text-gray-900 mb-2">85+</p>
+                <p className="text-md text-[#575556]">Projects Delivered</p>
+              </div>
+              <div className="text-center">
+                <p className="text-lg md:text-[42px] font-bold text-gray-900 mb-2">100M+</p>
+                <p className="text-md text-[#575556]">sqft Developed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <EnquiryModal
+      isOpen={isModalOpen}
+      onClose={() => setIsModalOpen(false)}
+      title={title}
+      subtitle={title === "Download Brochure" ? "Enter your name and number to get the brochure download instantly" : "Experience a virtual tour of our premium villa plots."}
+      openedEventTitle = {title === "Download Brochure" ? "Contact_form_opend_overview_1" : "Contact_form_opend_overview_2"}
+      submitEventTitle = {title === "Download Brochure" ? "Contact_form_submit_overview_1" : "Contact_form_submit_overview_2"}
+    />
+    </>
+  )
+}
