@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
         
       </footer>
-      <div className="md:hidden w-full flex flex-wrap gap-1 bg-white rounded-t-md pt-6 pr-5 pl-3 pb-5 items-center justify-between bottom-0 sticky">
+      <div className="md:hidden w-full flex flex-wrap gap-1 bg-white rounded-t-md pt-6 pr-5 pl-3 pb-5 items-center justify-between bottom-0 sticky z-50">
   <button
     className="bg-primary text-md text-white px-8 py-3 rounded-[4px] font-semibold transition-colors flex items-center gap-2 shadow-md cursor-pointer min-w-[177px] flex-1 sm:flex-initial sm:w-auto justify-center"
     onClick={handleCallClick}
