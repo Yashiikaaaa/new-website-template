@@ -119,16 +119,20 @@ export default function LocationMap() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
               {/* Explore Button on Map */}
-              {/* <button className="absolute bottom-4 md:bottom-6 right-4 md:right-6 bg-primary hover:bg-[#9a1751] text-white px-5 md:px-8 py-2 md:py-3 rounded-md font-semibold font-['Urbanist'] text-sm md:text-[14px] transition-colors duration-300 shadow-lg">
+              <button className="absolute top-4 md:top-4 right-4 md:right-4 bg-primary hover:bg-[#9a1751] text-white px-5 md:px-8 py-2 md:py-3 rounded-[4px] font-semibold font-['Urbanist'] text-sm md:text-[14px] transition-colors duration-300 shadow-lg cursor-pointer"
+                onClick={() => {
+                  window.open("https://www.google.com/maps/place/Lodha+Mirabelle/@13.0507394,77.6191661,15z/data=!4m6!3m5!1s0x3bae17d1f399b41f:0x9e6211cae3335ba3!8m2!3d13.0507394!4d77.6213552!16s%2Fg%2F11c52_5y7y", "_blank")
+                }}
+              >
                 Explore
-              </button> */}
+              </button>
             </div>
           </div>
 
           {/* Category Tabs and Details */}
-          <div className="w-full md:w-full overflow-x-auto h-full">
+          <div className="w-full md:w-full overflow-x-auto h-full scrollbar-hide">
             {/* Category Buttons */}
-            <div className="flex overflow-x-auto gap-2 md:gap-3 mb-6 md:mb-8 pb-2 scrollbar-hide snap-x snap-mandatory">
+            <div className="flex overflow-x-auto gap-2 md:gap-3 mb-6 md:mb-8 pb-2 scrollbar-hide snap-x snap-mandatory h-auto">
               {categories.map((category) => (
                 <button
                   key={category.id}
@@ -150,7 +154,7 @@ export default function LocationMap() {
             </div>
 
             {/* Location List */}
-            <div className="space-y-2 md:space-y-3 bg-white rounded-lg p-4 md:p-6 border border-gray-200 shadow-sm md:h-[55vh]">
+            <div className="space-y-2 md:space-y-3 bg-white rounded-lg p-2 md:p-4 border border-gray-200 shadow-sm h-[406px] overflow-y-auto scrollbar-hide">
               {locationData[activeCategory]?.map((location, index) => (
                 <div
                   key={index}

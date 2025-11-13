@@ -18,7 +18,7 @@ export default function Introduction() {
               <img
                 src="/godrej-project-aerial-view-green-landscape.jpg"
                 alt="Godrej Aerial View"
-                className="w-full h-full object-cover rounded-sm shadow-lg"
+                className="w-full h-full object-cover rounded-[4px] shadow-lg hover:scale-105 transition-transform duration-300"
               />
             </div>
             
@@ -27,7 +27,7 @@ export default function Introduction() {
               <img
                 src="/godrej-modern-residential-building-architecture.jpg"
                 alt="Godrej Residential Building"
-                className="w-full h-full object-cover rounded-sm shadow-xl"
+                className="w-full h-full object-cover rounded-[4px] shadow-xl  hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>
@@ -47,19 +47,19 @@ export default function Introduction() {
             </p>
 
             {/* Buttons */}
-            <div className="flex gap-[11px] md:gap-4 flex-row mb-8 w-full justify-between py-2.5 font-['Urbanist']">
-              <button className="bg-primary text-md  text-white px-8 py-3 rounded-sm font-semibold transition-colors flex items-center gap-1 md:gap-2 shadow-md cursor-pointer  md:min-w-[290px]"
+            <div className="flex gap-[11px] md:gap-4 flex-wrap mb-6 md:mb-8 w-full justify-between md:py-2 font-['Urbanist']">
+              <button className="bg-primary text-md  text-white px-4 md:px-8 py-3 rounded-[4px] font-semibold transition-colors flex items-center justify-center gap-1 md:gap-2 shadow-md cursor-pointer min-w-[177px]  md:min-w-[290px]"
                 onClick={()=>{setIsModalOpen(true)
                   setTitle("Download Brochure")
                 }}>
-                <img src="/download.svg" alt="Brochure Icon" className="w-4 h-4" />
+                <img src="/download.svg" alt="Brochure Icon" className="w-3.5 h-3.5 md:w-4.5 md:h-4.5" />
                 Download Brochure
               </button>
-              <button className="border text-md border-primary text-primary px-8 py-3 rounded-sm font-semibold transition-colors flex items-center gap-1 md:gap-2 cursor-pointer   md:min-w-[290px]"
+              <button className="border text-md border-primary text-primary px-8 py-3 rounded-[4px] font-semibold transition-colors flex items-center justify-center gap-1 md:gap-2 cursor-pointer min-w-[177px] md:min-w-[290px]"
                   onClick={()=>{setIsModalOpen(true)
                   setTitle("Virtual Tour")
                   }}  >
-                <img src="/camera.svg" alt="Virtual Tour Icon" className="w-4.5 h-4.5" />
+                <img src="/camera.svg" alt="Virtual Tour Icon" className="w-3.5 h-3.5 md:w-4.5 md:h-4.5" />
                 Virtual Tour
               </button>
             </div>

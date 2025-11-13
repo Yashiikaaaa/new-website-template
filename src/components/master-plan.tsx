@@ -7,9 +7,9 @@ export default function MasterPlan() {
   return (
     <>
     <section className="py-12 md:py-20 bg-[#F7F1F7]">
-      <div className="md:pl-[204px] mx-auto pl-4 ">
+      <div className=" mx-auto pl-4 md:pl-0 max-w-7xl">
         {/* Header with Download Button */}
-        <div className="flex flex-col md:flex-row md:items-start md:pr-[204px] pr-4 md:justify-between mb-8 md:mb-12 gap-4">
+        <div className="flex flex-col md:flex-row md:items-start  pr-4 md:justify-between mb-8 md:mb-12 gap-4">
           <div className="flex-1">
             <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-['Urbanist']">
               Master Plan
@@ -30,19 +30,19 @@ export default function MasterPlan() {
         <div className="relative w-full h-[151px] md:h-[534px] bg-[#1E341E] rounded-lg md:rounded-xl overflow-hidden shadow-lg">
           <div className="absolute inset-0 flex items-center">
             {/* Scrollable Row */}
-            <div className="w-full flex flex-nowrap overflow-x-auto scrollbar-hide px-4 md:px-6 py-4 md:py-6 gap-4 md:gap-6 snap-x snap-mandatory">
+            <div className="w-full flex flex-row overflow-x-auto scrollbar-hide px-4 md:px-6 py-4 md:py-6 gap-4 md:gap-6 snap-x snap-mandatory h-[130px] md:h-[480px] min-w-[260px] md:min-w-[720px]">
               {/* First Brochure Image */}
               <img
                 src="/brochure.png"
                 alt="Master Plan Brochure - Page 1"
-                className="inline-block object-contain rounded-md snap-start h-[130px] md:h-[480px] min-w-[260px] md:min-w-[720px] flex-shrink-0"
+                className="inline-block object-contain rounded-[4px] snap-start  flex-shrink-0"
               />
               
               {/* Second Brochure Image (Blurred for preview) */}
               <img
                 src="/brochure.png"
                 alt="Master Plan Brochure - Page 2"
-                className="inline-block object-contain rounded-md snap-start blur-xl h-[130px] md:h-[480px] min-w-[260px] md:min-w-[720px] flex-shrink-0"
+                className="inline-block object-contain rounded-[4px] snap-start blur-3xl  flex-shrink-0"
               />
             </div>
           </div>

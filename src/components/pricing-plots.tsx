@@ -63,7 +63,7 @@ export default function PricingPlots() {
     <>
     <section id="configuration" className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-0">
-        <div className="mb-12">
+        <div className="mb-9">
           <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-4 text-[#221628] font-['Urbanist']">
             Choose Your Perfect Plot
           </h2>
@@ -76,13 +76,13 @@ export default function PricingPlots() {
         <div className="relative">
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth pb-4 scrollbar-hide snap-x snap-mandatory"
+            className="flex gap-8 overflow-x-auto scroll-smooth p-1 items-center scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {plots.map((plot, index) => (
               <div
                 key={index}
-                className="shrink-0 w-[280px] md:w-[320px] bg-white border border-gray-200 rounded-md p-4 shadow-[0px_0px_4px_0px_#00000040] snap-center"
+                className="shrink-0 w-[280px] md:w-[320px] bg-white  rounded-[4px] p-4 shadow-[0px_0px_4px_0px_#00000040] snap-center"
               >
                 <div className="mb-[30px] justify-center items-center text-center font-['Urbanist']">
                   <h3 className="text-2xl md:text-4xl font-bold text-[#221628] mb-1">
@@ -93,7 +93,7 @@ export default function PricingPlots() {
                   </p>
                 </div>
 
-                <button className="w-full bg-primary text-white py-3 px-4 rounded-md font-semibold text-lg font-['Urbanist']"
+                <button className="w-full bg-primary text-white py-3 px-4 rounded-[4px] font-semibold text-lg font-['Urbanist'] cursor-pointer"
                   onClick={() => {setIsModalOpen(true)
                     setClickedIndex(index)
                   }}

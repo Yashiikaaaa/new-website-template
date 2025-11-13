@@ -85,7 +85,7 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <button className="bg-primary text-white px-4 sm:px-6 py-2 rounded-md hover:bg-primary-light transition font-medium text-sm sm:text-base cursor-pointer"
+          <button className="bg-primary text-white px-4 sm:px-6 py-2 rounded-[4px] hover:bg-primary-light transition font-medium text-sm sm:text-base cursor-pointer"
             onClick={() => setIsModalOpen(true)}
           >
             Enquire Now

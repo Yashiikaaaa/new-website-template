@@ -44,7 +44,7 @@ export default function Amenities() {
 
   return (
     <section id="amenities" className="py-12 md:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-0">
         <div className="mb-8 md:mb-12">
           <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-['Urbanist']">
             Amenities & Facilities
@@ -66,15 +66,26 @@ export default function Amenities() {
               `}
             >
               <div className="flex flex-col md:flex-row justify-between items-center h-full p-4 md:px-5 md:py-4 gap-2">
+                <div className="flex md:hidden justify-end items-end w-full">
+                  <img 
+                    src={amenity.icon} 
+                    alt={amenity.name} 
+                    className={`w-10 h-10 md:w-12 md:h-12 object-contain ${
+                      amenity.colored ? 'filter brightness-0 invert' : ''
+                    }`}
+                  />
+                </div>
                 {/* Title */}
-                <h3 className={`text-base md:text-xl lg:text-[28pxl font-bold font-['Urbanist']  leading-tight ${
+                <div className="w-full">
+                <h3 className={`text-base md:text-xl lg:text-[28pxl items-start font-bold font-['Urbanist']  w-[60%] md:w-full leading-tight ${
                   amenity.colored ? "text-white" : "text-[#221628]"
                 }`}>
                   {amenity.name}
                 </h3>
+                </div>
                 
                 {/* Icon */}
-                <div className="flex justify-end">
+                <div className="hidden md:flex justify-end items-end w-full">
                   <img 
                     src={amenity.icon} 
                     alt={amenity.name} 

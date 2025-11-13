@@ -51,7 +51,7 @@ export default function WhyChoose() {
           {images.map((image, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-700 ease-in-out ${
+              className={`relative overflow-hidden rounded-2xl max-h-[477px] cursor-pointer transition-all duration-700 ease-in-out ${
                 expandedIndex === index 
                   ? "flex-3" 
                   : "flex-[0.7] hover:flex-[0.8]"
@@ -89,13 +89,13 @@ export default function WhyChoose() {
               </div>
 
               {/* Vertical Title for Collapsed State */}
-              {expandedIndex !== index && (
+              {/* {expandedIndex !== index && (
                 <div className="absolute inset-0 flex items-end justify-center pb-6">
                   <p className="text-white font-semibold text-base writing-mode-vertical transform -rotate-180">
                     {image.title}
                   </p>
                 </div>
-              )}
+              )} */}
             </div>
           ))}
         </div>
@@ -142,13 +142,13 @@ export default function WhyChoose() {
               </div>
 
               {/* Vertical Title for Collapsed State on Mobile */}
-              {mobileExpandedIndex !== index && (
+              {/* {mobileExpandedIndex !== index && (
                 <div className="absolute inset-0 flex items-end justify-center pb-4">
                   <p className="text-white font-semibold text-sm writing-mode-vertical transform -rotate-180">
                     {image.title}
                   </p>
                 </div>
-              )}
+              )} */}
             </div>
           ))}
         </div>

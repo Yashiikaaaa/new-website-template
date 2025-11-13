@@ -65,9 +65,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="md:hidden w-full flex flex-row gap-1 bg-white rounded-t-md p-4 itmes-center justify-between">
+        <div className="md:hidden w-full flex flex-wrap gap-1 bg-white rounded-t-md pt-6 pr-5 pl-3 pb-5 itmes-center justify-between">
           <button
-            className="bg-primary text-md  text-white px-8 py-3 rounded-sm font-semibold transition-colors flex items-center gap-2 shadow-md cursor-pointer w-full justify-center"
+            className="bg-primary text-md  text-white px-8 py-3 rounded-sm font-semibold transition-colors flex items-center gap-2 shadow-md cursor-pointer min-w-[177px] w-auto justify-center "
             onClick={handleCallClick}
           >
             <svg
@@ -88,7 +88,7 @@ export default function Footer() {
             Contact Us
           </button>
           <button
-            className="border text-md border-primary text-primary px-8 py-3 rounded-sm font-semibold transition-colors flex items-center gap-2 cursor-pointer w-full justify-center"
+            className="border text-md border-primary text-primary px-8 py-3 rounded-sm font-semibold transition-colors flex items-center gap-2 cursor-pointer min-w-[177px] w-auto justify-center"
             onClick={() => {
               window.open("https://wa.me/9353329893", "_blank");
             }}

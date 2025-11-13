@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="overview"
-      className="relative max-w-7xl rounded-sm mx-auto h-[500px] md:h-screen overflow-hidden"
+      className="relative max-w-7xl rounded-sm mx-auto h-[458px] md:h-[560px] overflow-hidden"
     >
       {/* Background Image */}
       <div
@@ -62,7 +62,7 @@ export default function Hero() {
 
           {/* CTA Button */}
           <button
-            className="bg-white text-primary text-base md:text-lg px-6 md:px-8 py-3 rounded-md font-['Urbanist'] font-semibold cursor-pointer mx-auto md:mx-0 block md:inline-block"
+            className="bg-white text-primary text-base md:text-lg px-6 md:px-8 py-3 rounded-[4px] font-['Urbanist'] font-semibold cursor-pointer mx-auto md:mx-0 block md:inline-block"
             onClick={() => setIsModalOpen(true)}
           >
             Enquire Now
