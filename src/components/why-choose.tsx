@@ -38,10 +38,10 @@ export default function WhyChoose() {
     <section className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-0">
         <div className="mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-4xl lg:text-[44px]  mb-3 md:mb-4 font-extrabold font-Urbanist text-[#221628]">
+          <h2 className="text-2xl md:text-4xl lg:text-[44px]  mb-3 md:mb-4 font-extrabold font-['Urbanist'] text-[#221628]">
             Why Residents Choose Godrej
           </h2>
-          <p className="text-[#433F3E] font-medium font-Urbanist text-[14px] md:text-base lg:text-lg max-w-2xl">
+          <p className="text-[#433F3E] font-medium font-['Urbanist'] text-[14px] md:text-base lg:text-lg max-w-2xl">
             A perfect blend of location, lifestyle, and legacy that residents truly love.
           </p>
         </div>

@@ -166,7 +166,7 @@ export default function EnquiryModal({
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-[385px] md:max-w-[513px] bg-white rounded-md shadow-2xl max-h-[90vh] overflow-y-auto"
+        className="relative w-full md:max-w-[513px] bg-white rounded-md shadow-2xl max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -201,10 +201,10 @@ export default function EnquiryModal({
 
         {/* Content */}
         <div className="px-6 md:px-8 py-4.5 md:py-4.5">
-          <h2 className="text-2xl md:text-4xl font-bold mb-3 text-[#221628] font-Urbanist">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 text-[#221628] font-['Urbanist']">
             {title}
           </h2>
-          <p className="text-[#5A5555] text-sm md:text-md mb-3 font-medium font-Urbanist">
+          <p className="text-[#5A5555] text-sm md:text-md mb-3 font-medium font-['Urbanist']">
             {subtitle}
           </p>
 
@@ -214,7 +214,7 @@ export default function EnquiryModal({
             <div>
               <label 
                 htmlFor="name" 
-                className="block text-[#221628] text-md font-medium mb-1 font-Urbanist"
+                className="block text-[#221628] text-md font-medium mb-1 font-['Urbanist']"
               >
                 Full Name
               </label>
@@ -224,7 +224,7 @@ export default function EnquiryModal({
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="Enter Your Name"
-                className="w-full px-4 py-3 border border-[#9498A6] rounded-lg text-[#252626] placeholder:text-[#7A7B7C] focus:border-primary focus:outline-none transition-colors font-Urbanist font-normal text-base"
+                className="w-full px-4 py-2 md:py-3 border border-[#9498A6] rounded-md text-[#252626] placeholder:text-[#7A7B7C] focus:border-primary focus:outline-none transition-colors font-['Urbanist'] font-normal text-base"
                 required
               />
             </div>
@@ -233,16 +233,16 @@ export default function EnquiryModal({
             <div>
               <label 
                 htmlFor="phone" 
-                className="block text-[#221628] text-md font-medium mb-1 font-Urbanist"
+                className="block text-[#221628] text-md font-medium mb-1 font-['Urbanist']"
               >
                 Phone Number
               </label>
-              <div className="flex gap-2">
+              <div className="flex gap-1.5 md:gap-2">
                 {/* Country Code Dropdown */}
                 <select
                   value={formData.countryCode}
                   onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
-                  className=" w-20 md:w-32 px-4 py-3 border border-[#9498A6] rounded-lg text-[#252626] focus:border-primary focus:outline-none transition-colors font-Urbanist text-base bg-white appearance-none cursor-pointer"
+                  className=" w-20 md:w-32 px-2 md:px-4 py-2 md:py-3 border border-[#9498A6] rounded-md text-[#252626] focus:border-primary focus:outline-none transition-colors font-['Urbanist'] text-base bg-white appearance-none cursor-pointer"
                   style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23575556' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
                     backgroundRepeat: 'no-repeat',
@@ -265,7 +265,7 @@ export default function EnquiryModal({
                   placeholder="0000000000"
                   maxLength={10}
                   pattern="[0-9]{10}"
-                  className="flex-1 px-4 py-3 border border-[#9498A6] rounded-lg text-[#252626] placeholder:text-[#7A7B7C] focus:border-primary focus:outline-none transition-colors font-Urbanist text-base"
+                  className="flex-1 w-full px-4 py-2 md:py-3 border border-[#9498A6] rounded-md text-[#252626] placeholder:text-[#7A7B7C] focus:border-primary focus:outline-none transition-colors font-['Urbanist'] text-base"
                   required
                 />
               </div>
@@ -274,7 +274,7 @@ export default function EnquiryModal({
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-primary hover:bg-[#9a1751] text-white py-3.5 px-5 rounded-[8px] font-bold text-base font-Urbanist transition-colors duration-300 shadow-lg mt-9"
+              className="w-full bg-primary hover:bg-[#9a1751] text-white py-3.5 px-5 rounded-[8px] font-bold text-base font-['Urbanist'] transition-colors duration-300 shadow-lg mt-9"
               disabled={loading}
             >
               {loading ? "Submitting..." : "Enquire"}

@@ -1,9 +1,8 @@
-
-'use client'
-import EnquiryModal from "@/components/EnquiryModal"
+"use client";
+import EnquiryModal from "@/components/EnquiryModal";
 import { useState } from "react";
 export default function Hero() {
-  const [isModalOpen, setIsModalOpen] =  useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section
@@ -24,16 +23,15 @@ export default function Hero() {
       {/* Additional vignette overlay for better text contrast */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/30" />
 
-      {/* Content */}
       <div className="relative h-full flex flex-col justify-center items-center md:items-start max-w-6xl mx-auto px-4 md:px-0">
-        <div className="text-white max-w-2xl">
+        <div className="text-white text-center md:text-left items-center md:items-start max-w-2xl">
           {/* New Launch Badge */}
-          <div className="bg-[#D99B2A]/60 backdrop-blur-sm flex gap-2 items-center w-fit border border-[#D99B2A] px-3 py-1.5 rounded-full text-sm md:text-base font-bold mb-4">
+          <div className="bg-[#D99B2A]/60 backdrop-blur-sm flex gap-2 items-center w-fit mx-auto md:mx-0 border border-[#D99B2A] px-3 py-1.5 rounded-full text-sm md:text-base font-bold font-['Plus_Jakarta_Sans'] mb-4">
             <svg
               width="15"
               height="15"
               viewBox="0 0 15 15"
-              fill="none" 
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="shrink-0"
             >
@@ -53,35 +51,33 @@ export default function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-[36px] md:text-5xl lg:text-[58px] font-800 font-Urbanist mb-4 leading-tight drop-shadow-2xl">
+          <h1 className="text-[36px] md:text-5xl lg:text-[58px] font-extrabold font-['Urbanist'] mb-4 leading-tight drop-shadow-2xl">
             Godrej New Project in North Bangalore
           </h1>
 
           {/* Description */}
-          <p className="text-[14px] md:text-lg lg:text-lg mb-8 text-gray-200 drop-shadow-lg">
-            Experience luxurious living in a sustainable community
+          <p className="text-[14px] md:text-lg lg:text-lg mb-8 text-gray-200 font-['Urbanist'] font-medium drop-shadow-lg">
+            Premium Plotted Development in Doddballapur
           </p>
 
           {/* CTA Button */}
-          <button className="bg-white text-primary text-base md:text-lg px-6 md:px-8 py-3 rounded-md font-Urbanist font-semibold cursor-pointer"
+          <button
+            className="bg-white text-primary text-base md:text-lg px-6 md:px-8 py-3 rounded-md font-['Urbanist'] font-semibold cursor-pointer mx-auto md:mx-0 block md:inline-block"
             onClick={() => setIsModalOpen(true)}
-            >
+          >
             Enquire Now
           </button>
         </div>
       </div>
 
-      
-        <EnquiryModal 
-          title="Enquire Now"
-          subtitle="Fill out the form below and our team will get back to you shortly."
-          onClose={() => setIsModalOpen(false)}
-          isOpen={isModalOpen}
-          openedEventTitle="Contact_form_opened_hero_banner"
-          submitEventTitle="Contact_form_submit_hero_banner"
-        />
-      
-
+      <EnquiryModal
+        title="Enquire Now"
+        subtitle="Fill out the form below and our team will get back to you shortly."
+        onClose={() => setIsModalOpen(false)}
+        isOpen={isModalOpen}
+        openedEventTitle="Contact_form_opened_hero_banner"
+        submitEventTitle="Contact_form_submit_hero_banner"
+      />
     </section>
   );
 }

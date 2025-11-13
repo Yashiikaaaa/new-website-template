@@ -34,20 +34,20 @@ export default function Introduction() {
 
           {/* Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold mb-6 text-[#221628] font-Urbanist">
+            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold mb-6 text-[#221628] font-['Urbanist']">
               Introducing the Godrej
             </h2>
             
-            <p className="text-[#575556] mb-4 leading-relaxed text-sm md:text-md font-Urbanist">
+            <p className="text-[#575556] mb-4 leading-relaxed text-sm md:text-md font-['Urbanist']">
               For over 125 years, Godrej has been synonymous with trust, quality, and innovation. As one of India's most respected conglomerates, we bring the same commitment to excellence in creating homes that inspire and endure.With a total of around 500 plots across 50 acres, Godrej Plots Doddaballapur offers premium villa plots in North Bangalore, ranging from approximately 1200 to 4000 sq. ft.
             </p>
             
-            <p className="text-[#575556] mb-8 leading-relaxed text-sm md:text-md font-Urbanist">
+            <p className="text-[#575556] mb-8 leading-relaxed text-sm md:text-md font-['Urbanist']">
               The development features a gated community with luxury amenities like a clubhouse, swimming pool, and fitness center, as well as sustainable elements such as rainwater harvesting.
             </p>
 
             {/* Buttons */}
-            <div className="flex gap-[11px] md:gap-4 flex-row mb-8 w-full justify-between py-2.5 font-Urbanist">
+            <div className="flex gap-[11px] md:gap-4 flex-row mb-8 w-full justify-between py-2.5 font-['Urbanist']">
               <button className="bg-primary text-md  text-white px-8 py-3 rounded-sm font-semibold transition-colors flex items-center gap-1 md:gap-2 shadow-md cursor-pointer  md:min-w-[290px]"
                 onClick={()=>{setIsModalOpen(true)
                   setTitle("Download Brochure")
@@ -66,7 +66,7 @@ export default function Introduction() {
 
             <div  className='border mb-8'/>
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 font-Urbanist">
+            <div className="grid grid-cols-3 gap-6 font-['Urbanist']">
               <div className="text-center">
                 <p className="text-lg md:text-[42px] font-bold text-gray-900 mb-2">125+</p>
                 <p className="text-md text-[#575556]">Years of Legacy</p>

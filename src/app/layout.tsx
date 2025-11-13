@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: "Godrej New Project - North Bangalore",
   description:
     "Explore premium residential properties by Godrej in North Bangalore",
- 
 };
 
 export default function RootLayout({
@@ -50,7 +49,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-N2F9R3DQ');`,
           }}
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J8R39GCCX"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-3J8R39GCCX"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -61,6 +63,9 @@ gtag('config', 'G-3J8R39GCCX');
 `,
           }}
         />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet"/>
+
       </head>
       <body className={inter.className}>
         <noscript>
@@ -71,8 +76,6 @@ gtag('config', 'G-3J8R39GCCX');
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-      
-
 
         {children}
       </body>

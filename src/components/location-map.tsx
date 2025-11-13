@@ -89,12 +89,12 @@ export default function LocationMap() {
 
   return (
     <section id="location" className="py-12 md:py-20 bg-[#F7F1F7]">
-      <div className="max-w-[366px] md:max-w-7xl px-4 md:px-0 md:mx-auto">
+      <div className="w-full md:max-w-7xl px-4 md:px-0 md:mx-auto">
         <div className="mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-Urbanist">
+          <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-['Urbanist']">
             Location & Connectivity
           </h2>
-          <p className="text-[#433F3E] text-[14px] md:text-lg font-medium font-Urbanist max-w-3xl">
+          <p className="text-[#433F3E] text-[14px] md:text-lg font-medium font-['Urbanist'] max-w-3xl">
             Strategically located for seamless connectivity to all major landmarks
           </p>
         </div>
@@ -119,21 +119,21 @@ export default function LocationMap() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
               {/* Explore Button on Map */}
-              {/* <button className="absolute bottom-4 md:bottom-6 right-4 md:right-6 bg-primary hover:bg-[#9a1751] text-white px-5 md:px-8 py-2 md:py-3 rounded-md font-semibold font-Urbanist text-sm md:text-[14px] transition-colors duration-300 shadow-lg">
+              {/* <button className="absolute bottom-4 md:bottom-6 right-4 md:right-6 bg-primary hover:bg-[#9a1751] text-white px-5 md:px-8 py-2 md:py-3 rounded-md font-semibold font-['Urbanist'] text-sm md:text-[14px] transition-colors duration-300 shadow-lg">
                 Explore
               </button> */}
             </div>
           </div>
 
           {/* Category Tabs and Details */}
-          <div className="w-[380px] md:w-full overflow-x-auto h-full">
+          <div className="w-full md:w-full overflow-x-auto h-full">
             {/* Category Buttons */}
             <div className="flex overflow-x-auto gap-2 md:gap-3 mb-6 md:mb-8 pb-2 scrollbar-hide snap-x snap-mandatory">
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center gap-1.5 md:gap-2.5 px-2.5 md:px-3 py-2 md:py-2.5 rounded-md font-semibold font-Urbanist text-xs md:text-base transition-all duration-300 whitespace-nowrap shrink-0 snap-start ${
+                  className={`flex items-center gap-1.5 md:gap-2.5 px-2.5 md:px-3 py-2 md:py-2.5 rounded-md font-semibold font-['Urbanist'] text-xs md:text-base transition-all duration-300 whitespace-nowrap shrink-0 snap-start ${
                     activeCategory === category.id
                       ? "bg-primary text-white shadow-md"
                       : "bg-white text-[#221628] border border-[#E8E7E8] hover:border-primary hover:text-primary"
@@ -164,11 +164,11 @@ export default function LocationMap() {
                         {getCurrentIcon()}
                       </div>
                     </div>
-                    <p className="font-semibold text-[#221628] font-Urbanist text-sm md:text-base truncate">
+                    <p className="font-semibold text-[#221628] font-['Urbanist'] text-sm md:text-base truncate">
                       {location.name}
                     </p>
                   </div>
-                  <span className="text-[#575556] font-medium font-Urbanist text-xs md:text-sm bg-[#E8E7E8] px-3 md:px-4 py-1.5 md:py-2 rounded-full whitespace-nowrap ml-2 shrink-0">
+                  <span className="text-[#575556] font-medium font-['Urbanist'] text-xs md:text-sm bg-[#E8E7E8] px-3 md:px-4 py-1.5 md:py-2 rounded-full whitespace-nowrap ml-2 shrink-0">
                     {location.distance}
                   </span>
                 </div>

@@ -34,10 +34,10 @@ export default function FAQs() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           {/* Left Side - Title and Description */}
           <div className="md:pr-8">
-            <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-4 md:mb-6 text-[#221628] font-Urbanist leading-tight">
+            <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-4 md:mb-6 text-[#221628] font-['Urbanist'] leading-tight">
               Frequently Asked Questions
             </h2>
-            <p className="text-[#575556] text-[14px] md:text-base font-medium font-Urbanist">
+            <p className="text-[#575556] text-[14px] md:text-base font-medium font-['Urbanist']">
               Find quick answers to common question about the project.
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function FAQs() {
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full p-3 md:p-4 flex justify-between items-center gap-4 text-left transition-colors duration-200"
                 >
-                  <span className="font-semibold text-[#0A0B0A] font-Urbanist text-base md:text-xl pr-2">
+                  <span className="font-semibold text-[#0A0B0A] font-['Urbanist'] text-base md:text-xl pr-2">
                     {faq.question}
                   </span>
                   <span className="shrink-0 w-6 h-6 flex items-center justify-center">
@@ -100,7 +100,7 @@ export default function FAQs() {
                   }`}
                 >
                   <div className="px-5 md:px-6 pb-4 md:pb-5 pt-2">
-                    <p className="text-[#575556] text-sm md:text-lg leading-normal font-medium font-Urbanist">
+                    <p className="text-[#575556] text-sm md:text-lg leading-normal font-medium font-['Urbanist']">
                       {faq.answer}
                     </p>
                   </div>

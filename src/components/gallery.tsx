@@ -7,11 +7,11 @@ export default function Gallery() {
 
   const images = [
     { src: "/modern-apartment-interior-design-living-room.jpg", desktopCols: 1, mobileRows: 1 },
-    { src: "/luxury-kitchen-with-modern-appliances.jpg", desktopCols: 3, mobileRows: 3 },
+    { src: "/luxury-kitchen-with-modern-appliances.jpg", desktopCols: 3, mobileRows: 1 },
     { src: "/spacious-bedroom-with-natural-light.jpg", desktopCols: 2, mobileRows: 2 },
     { src: "/community-garden-and-green-space.jpg", desktopCols: 3, mobileRows: 2 },
     { src: "/wimming-pool-recreation-area.jpg", desktopCols: 2, mobileRows: 3 },
-    { src: "/residential-buildings-complex.jpg", desktopCols: 1, mobileRows: 1 },
+    { src: "/residential-buildings-complex.jpg", desktopCols: 1, mobileRows: 3 },
   ]
 
   return (
@@ -19,10 +19,10 @@ export default function Gallery() {
       <section id="gallery" className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-0">
           <div className="mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-Urbanist">
+            <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-['Urbanist']">
               Choose Your Perfect Plot
             </h2>
-            <p className="text-[#433F3E] text-[14px] md:text-lg font-medium font-Urbanist max-w-3xl">
+            <p className="text-[#433F3E] text-[14px] md:text-lg font-medium font-['Urbanist'] max-w-3xl">
               Select from our range of thoughtfully sized plots, each designed to give you the space to build your dream home
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function Gallery() {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="relative overflow-hidden rounded-lg group cursor-pointer shadow-md w-[180px]"
+                className="relative overflow-hidden rounded-lg group cursor-pointer shadow-md w-[48%] h-auto"
                 style={{ 
                   gridColumn: image.mobileRows === 3 ? 'span 2' : image.mobileRows === 2 ? 'span 2' : 'span 1',
                   height: image.mobileRows === 3 ? '280px' : image.mobileRows === 2 ? '200px' : '140px',

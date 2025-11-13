@@ -14,10 +14,10 @@ export default function QuickStats() {
             {stats.map((stat, index) => (
               <div 
                 key={index} 
-                className={`text-center font-Urbanist ${
-                  index < stats.length - 1 ? 'border-r border-gray-300' : ''
+                className={`text-center font-['Urbanist'] ${
+                  index < stats.length - 1 && index%2 !== 1 ? 'border-r border-[#4F4B4B]' : ''
                 } ${
-                  index % 2 === 1 && index < 2 ? 'md:border-r' : ''
+                  index % 2 === 1 && index < 2 ? 'md:border-r md:border-[#4F4B4B]' : ''
                 }`}
               >
                 <p className="text-[#575556] text-sm md:text-base lg:text-lg font-medium mb-1 md:mb-2">

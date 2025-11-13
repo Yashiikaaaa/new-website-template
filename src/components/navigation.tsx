@@ -69,7 +69,7 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-8 text-[#2B2928] font-semibold font-Urbanist">
+          <div className="hidden md:flex gap-8 text-[#2B2928] font-semibold font-['Urbanist']">
             <Link href="#overview" className="hover:text-primary transition">
               Overview
             </Link>

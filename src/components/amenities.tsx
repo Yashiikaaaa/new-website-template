@@ -3,7 +3,7 @@ export default function Amenities() {
     { 
       name: "Lush Greenery", 
       icon: '/lush-greenery.svg',
-      colored: false 
+      colored: false
     },
     { 
       name: "CCTV Surveillance", 
@@ -12,17 +12,17 @@ export default function Amenities() {
     },
     { 
       name: "Solar Street Lights", 
-      icon:'/solar.svg',
+      icon: '/solar.svg',
       colored: false 
     },
     { 
       name: "24 x 7 Security", 
-      icon:'/24x7.svg',
+      icon: '/24x7.svg',
       colored: true 
     },
     { 
       name: "Open Spaces", 
-      icon:'/open-spaces.svg',
+      icon: '/open-spaces.svg',
       colored: true 
     },
     { 
@@ -37,47 +37,52 @@ export default function Amenities() {
     },
     { 
       name: "Outdoor Courts", 
-      icon:'/court.svg',
+      icon: '/court.svg',
       colored: false 
     },
   ]
 
   return (
     <section id="amenities" className="py-12 md:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-Urbanist">
+          <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-['Urbanist']">
             Amenities & Facilities
           </h2>
-          <p className="text-[#433F3E] text-[14px] md:text-lg font-medium font-Urbanist max-w-3xl">
-            It offers its residents access to an exclusive array of recreational and sporting facilities that could rival any resort. 
+          <p className="text-[#433F3E] text-[14px] md:text-lg font-medium font-['Urbanist'] max-w-3xl">
+            It offers its residents access to an exclusive array of recreational and sporting facilities that could rival any resort.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-[46px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
           {amenities.map((amenity, index) => (
             <div
               key={index}
-              className={`relative p-4 md:px-6 md:py-5 md:max-w-[285px] rounded-[4px] border group cursor-pointer ${
-                amenity.colored
+              className={`relative rounded-[4px]   border transition-all duration-300 hover:shadow-xl group cursor-pointer
+                ${amenity.colored
                   ? "bg-primary text-white border-primary hover:bg-[#9a1751]"
-                  : "bg-[#F2F2F2] text-[#221628] border-primary hover:border-[#9a1751]"
-              }`}
+                  : "bg-white text-[#221628] border-primary hover:border-[#9a1751]"
+                }
+              `}
             >
-              <div className="flex flex-row items-center justify-between h-full">
-                <h3 className={`text-lg md:text-xl lg:text-[28px] font-semibold font-Urbanist leading-[119%] ${
+              <div className="flex flex-col md:flex-row justify-between items-center h-full p-4 md:px-5 md:py-4 gap-2">
+                {/* Title */}
+                <h3 className={`text-base md:text-xl lg:text-[28pxl font-bold font-['Urbanist']  leading-tight ${
                   amenity.colored ? "text-white" : "text-[#221628]"
                 }`}>
                   {amenity.name}
                 </h3>
-                {/* <div className={`ml-auto ${amenity.colored ? "text-white" : "text-primary"}`}>
-                  {amenity.icon}
-                </div> */}
-                <img 
-                  src={amenity.icon} 
-                  alt={amenity.name} 
-                  className="w-10 h-10 md:w-12 md:h-12  object-contain"
-                />
+                
+                {/* Icon */}
+                <div className="flex justify-end">
+                  <img 
+                    src={amenity.icon} 
+                    alt={amenity.name} 
+                    className={`w-10 h-10 md:w-12 md:h-12 object-contain ${
+                      amenity.colored ? 'filter brightness-0 invert' : ''
+                    }`}
+                  />
+                </div>
               </div>
             </div>
           ))}

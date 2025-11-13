@@ -7,9 +7,9 @@ import PricingPlots from "@/components/pricing-plots"
 import LocationMap from "@/components/location-map"
 import Gallery from "@/components/gallery"
 import Amenities from "@/components/amenities"
-import MasterPlan from "@/components/master-plan"
 import FAQs from "@/components/faqs"
 import Footer from "@/components/footer"
+import MasterPlan from "@/components/master-plan"
 
 export default function Home() {
   return (
