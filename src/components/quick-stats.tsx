@@ -8,7 +8,7 @@ export default function QuickStats() {
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 md:-mt-20 relative z-10">
-      <div className="bg-white rounded-lg md:rounded-xl shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)] backdrop-blur-xl">
+      <div className=" bg-[#FFFFFFCF] rounded-lg md:rounded-xl shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)] backdrop-blur-xl">
         <div className="px-4 sm:px-6 md:px-8 py-6 md:py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat, index) => (

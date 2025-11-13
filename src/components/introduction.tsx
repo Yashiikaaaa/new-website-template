@@ -48,14 +48,14 @@ export default function Introduction() {
 
             {/* Buttons */}
             <div className="flex gap-[11px] md:gap-4 flex-wrap mb-6 md:mb-8 w-full justify-between md:py-2 font-['Urbanist']">
-              <button className="bg-primary text-md  text-white px-4 md:px-8 py-3 rounded-[4px] font-semibold transition-colors flex items-center justify-center gap-1 md:gap-2 shadow-md cursor-pointer min-w-[177px]  md:min-w-[290px]"
+              <button className="bg-primary text-md  text-white px-4 md:px-8 py-3 rounded-[4px] font-semibold transition-colors flex items-center justify-center gap-1 md:gap-2 shadow-md cursor-pointer min-w-[177px] flex-1 sm:flex-initial sm:w-auto md:min-w-[290px]"
                 onClick={()=>{setIsModalOpen(true)
                   setTitle("Download Brochure")
                 }}>
                 <img src="/download.svg" alt="Brochure Icon" className="w-3.5 h-3.5 md:w-4.5 md:h-4.5" />
                 Download Brochure
               </button>
-              <button className="border text-md border-primary text-primary px-8 py-3 rounded-[4px] font-semibold transition-colors flex items-center justify-center gap-1 md:gap-2 cursor-pointer min-w-[177px] md:min-w-[290px]"
+              <button className="border text-md border-primary text-primary px-8 py-3 rounded-[4px] font-semibold transition-colors flex items-center justify-center gap-1 md:gap-2 cursor-pointer min-w-[177px] flex-1 sm:flex-initial sm:w-auto md:min-w-[290px]"
                   onClick={()=>{setIsModalOpen(true)
                   setTitle("Virtual Tour")
                   }}  >

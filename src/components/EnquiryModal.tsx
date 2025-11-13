@@ -39,6 +39,15 @@ export default function EnquiryModal({
       })
     }
   }, [GA_MEASUREMENT_ID, isOpen, title])
+  useEffect(() => {
+    if (GA_MEASUREMENT_ID && isOpen) {
+      ReactGA.event({
+        category: "Engagement",
+        action: 'contact_form_opened',
+        label: title,
+      })
+    }
+  }, [GA_MEASUREMENT_ID, isOpen, title])
 
   const [formData, setFormData] = useState({
     name: "",
@@ -113,6 +122,14 @@ export default function EnquiryModal({
         ReactGA.event({
           category: "Conversion",
           action: submitEventTitle,
+          label: title,
+          value: 1,
+        })
+      }
+      if (GA_MEASUREMENT_ID) {
+        ReactGA.event({
+          category: "Conversion",
+          action: 'contact_form_submit',
           label: title,
           value: 1,
         })

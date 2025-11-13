@@ -7,6 +7,7 @@ import EnquiryModal from "./EnquiryModal"
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [lastClickedIndex, setLastClickedIndex] = useState<number>(0)
   const menuRef = useRef<HTMLElement | null>(null)
 
   // Close menu when clicking outside
@@ -32,8 +33,10 @@ export default function Navigation() {
     { href: "#configuration", label: "Configuration" },
     { href: "#location", label: "Location" },
     { href: "#gallery", label: "Gallery" },
+    { href: "#master-plan", label: "Master Plan" },
     { href: "#amenities", label: "Amenities" },
     { href: "#faqs", label: "FAQs" },
+    
   ]
 
   return (
@@ -82,10 +85,13 @@ export default function Navigation() {
             <Link href="#gallery" className="hover:text-primary transition">
               Gallery
             </Link>
+            <Link href="#master-plan" className="hover:text-primary transition">
+              Master Plan
+            </Link>
           </div>
 
           {/* CTA Button */}
-          <button className="bg-primary text-white px-4 sm:px-6 py-2 rounded-[4px] hover:bg-primary-light transition font-medium text-sm sm:text-base cursor-pointer"
+          <button className="bg-primary text-white px-4 sm:px-6 py-2 rounded-[4px] hover:bg-primary-light transition font-semibold font-['Urbanist'] text-sm sm:text-base cursor-pointer"
             onClick={() => setIsModalOpen(true)}
           >
             Enquire Now
@@ -104,9 +110,11 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {setIsOpen(false)
+                  setLastClickedIndex(index)
+                  }}
                   className={`text-[#2B2928] font-[urbanist] text-[16px] font-medium py-3 px-2 hover:bg-[#F7F1F7] hover:text-primary transition-colors ${
-                    index === 0 ? 'bg-[#F7F1F7]' : ''
+                    index === lastClickedIndex ? 'bg-[#F7F1F7]' : ''
                   }`}
                 >
                   {item.label}
