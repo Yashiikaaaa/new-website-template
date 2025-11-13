@@ -1,5 +1,5 @@
 export default function Amenities() {
-  const amenities = [
+  const Desktopamenities = [
     { 
       name: "Lush Greenery", 
       icon: '/lush-greenery.svg',
@@ -41,6 +41,50 @@ export default function Amenities() {
       colored: false 
     },
   ]
+   const Mobileamenities = [
+    { 
+      name: "Lush Greenery", 
+      icon: '/lush-greenery.svg',
+      colored: false 
+    },
+    { 
+      name: "CCTV Surveillance", 
+      icon: '/cctv.svg',
+      colored: true 
+    },
+    { 
+      name: "24 x 7 Security", 
+      icon: '/24x7.svg',
+      colored: true 
+    },
+    { 
+      name: "Solar Street Lights", 
+      icon: '/solar.svg',
+      colored: false 
+    },
+    { 
+      name: "Swimming Pools", 
+      icon: '/pool.svg',
+      colored: false 
+    },
+    { 
+      name: "Open Spaces", 
+      icon: '/open-spaces.svg',
+      colored: true 
+    },
+    { 
+      name: "Luxury Clubhouse", 
+      icon: '/clubhouse.svg',
+      colored: true 
+    },
+    { 
+      name: "Outdoor Courts", 
+      icon: '/court.svg',
+      colored: false 
+    },
+  ]
+
+  const amenities = typeof window !== 'undefined' && window.innerWidth >= 768 ? Desktopamenities : Mobileamenities;
 
   return (
     <section id="amenities" className="py-12 md:py-20 bg-white">
@@ -55,7 +99,7 @@ export default function Amenities() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
-          {amenities.map((amenity, index) => (
+          { amenities.map((amenity, index) => (
             <div
               key={index}
               className={`relative rounded-[4px]   border transition-all duration-300 hover:shadow-xl group cursor-pointer
@@ -77,7 +121,7 @@ export default function Amenities() {
                 </div>
                 {/* Title */}
                 <div className="w-full">
-                <h3 className={`text-base md:text-xl lg:text-[28pxl items-start font-bold font-['Urbanist']  w-[60%] md:w-full leading-tight ${
+                <h3 className={`text-xl md:text-[28px] lg:text-[28pxl items-start font-bold font-['Urbanist']  w-[80%] md:w-full leading-tight ${
                   amenity.colored ? "text-white" : "text-[#221628]"
                 }`}>
                   {amenity.name}
@@ -85,7 +129,7 @@ export default function Amenities() {
                 </div>
                 
                 {/* Icon */}
-                <div className="hidden md:flex justify-end items-end w-full">
+                <div className="hidden md:flex justify-end items-end w-full md:w-auto">
                   <img 
                     src={amenity.icon} 
                     alt={amenity.name} 

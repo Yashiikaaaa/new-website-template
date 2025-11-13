@@ -2,6 +2,8 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ToasterProvider from "@/components/ToasterProver";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -76,7 +78,7 @@ gtag('config', 'G-3J8R39GCCX');
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-
+          <ToasterProvider />
         {children}
       </body>
     </html>

@@ -1,73 +1,73 @@
-"use client"
-import EnquiryModal from "@/components/EnquiryModal"
+"use client";
+import EnquiryModal from "@/components/EnquiryModal";
 import { useState } from "react";
 
 export default function MasterPlan() {
-  const [isModalOpen, setIsModalOpen] =  useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-    <section id="master-plan" className="py-12 md:py-20 bg-[#F7F1F7]">
-      <div className=" mx-auto pl-4 md:pl-0 max-w-7xl">
-        {/* Header with Download Button */}
-        <div className="flex flex-col md:flex-row md:items-start  pr-4 md:pr-0 md:justify-between mb-8 md:mb-12 gap-4">
-          <div className="flex-1">
-            <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-['Urbanist']">
-              Master Plan
-            </h2>
-            <p className="text-[#433F3E] text-[14px] md:text-lg font-medium font-['Urbanist'] max-w-2xl">
-              Strategically located for seamless connectivity to all major landmarks
-            </p>
+      <section id="master-plan" className="py-12 md:py-20 bg-[#F7F1F7]">
+        <div className=" mx-auto pl-4 md:pl-0 max-w-7xl">
+          {/* Header with Download Button */}
+          <div className="flex flex-col md:flex-row md:items-start  pr-4 md:pr-0 md:justify-between mb-8 md:mb-12 gap-4">
+            <div className="flex-1">
+              <h2 className="text-2xl md:text-4xl lg:text-[44px] font-extrabold mb-3 md:mb-4 text-[#221628] font-['Urbanist']">
+                Master Plan
+              </h2>
+              <p className="text-[#433F3E] text-[14px] md:text-lg font-medium font-['Urbanist'] max-w-2xl">
+                Strategically located for seamless connectivity to all major
+                landmarks
+              </p>
+            </div>
+            <button
+              className="bg-primary hover:bg-[#9a1751] hidden md:flex text-white px-6 md:px-8 py-3 rounded-[4px] font-semibold font-['Urbanist'] text-sm md:text-base transition-colors duration-300 shadow-md items-center gap-2 whitespace-nowrap cursor-pointer"
+              onClick={() => setIsModalOpen(true)}
+            >
+              <img src={"/download.svg"} className="w-5 h-5" />
+              Download Brochure
+            </button>
           </div>
-          <button className="bg-primary hover:bg-[#9a1751] hidden md:flex text-white px-6 md:px-8 py-3 rounded-[4px] font-semibold font-['Urbanist'] text-sm md:text-base transition-colors duration-300 shadow-md items-center gap-2 whitespace-nowrap cursor-pointer"
+
+          {/* Scrollable Brochure Container */}
+          <div className="relative w-full h-[151px] md:h-[534px] bg-[#1E341E] rounded-[4px] overflow-hidden shadow-lg -mr-4 md:mr-0">
+            <div className="absolute inset-0 flex items-center">
+              {/* Scrollable Row */}
+              <div className="w-full flex flex-row overflow-x-auto scrollbar-hide px-2 md:px-6 py-4 md:py-6 md:gap-6">
+                {/* First Brochure Image */}
+                <img
+                  src="/brochure4.png"
+                  alt="Master Plan Brochure - Page 1"
+                  className="inline-block object-contain rounded-[4px] snap-start flex-shrink-0 snap-x snap-mandatory h-[130px] md:h-[480px] min-w-[260px] md:min-w-[720px]"
+                />
+
+                
+                <img
+                  src="/brochure2.png"
+                  alt="Master Plan Brochure - Page 2"
+                  className="inline-block object-contain rounded-[4px] snap-start flex-shrink-0 snap-x snap-mandatory h-[130px] md:h-[480px] min-w-[260px] md:min-w-[720px]"
+                />
+
+                
+              </div>
+            </div>
+          </div>
+          <button
+            className="bg-primary hover:bg-[#9a1751] md:hidden text-white mt-4.5 px-6 md:px-8 py-3 rounded-[4px] font-semibold font-['Urbanist'] text-sm md:text-base transition-colors duration-300 shadow-md flex flex-row items-center gap-2 whitespace-nowrap cursor-pointer"
             onClick={() => setIsModalOpen(true)}
           >
-            <img src={'/download.svg'} className='w-5 h-5'/>
+            <img src={"/download.svg"} className="w-5 h-5 object-contain" />
             Download Brochure
           </button>
         </div>
-
-        {/* Scrollable Brochure Container */}
-       <div className="relative w-full h-[151px] md:h-[534px] bg-[#1E341E] rounded-[4px] overflow-hidden shadow-lg -mr-4 md:mr-0">
-  <div className="absolute inset-0 flex items-center">
-    {/* Scrollable Row */}
-    <div className="w-full flex flex-row overflow-x-auto scrollbar-hide px-2 md:px-6 py-4 md:py-6 gap-2 md:gap-6">
-      {/* First Brochure Image */}
-      <img
-        src="/brochure.png"
-        alt="Master Plan Brochure - Page 1"
-        className="inline-block object-contain rounded-[4px] snap-start flex-shrink-0 snap-x snap-mandatory h-[130px] md:h-[480px] min-w-[260px] md:min-w-[720px]"
+      </section>
+      <EnquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Download Brochure"
+        subtitle="Enter your name and number to get the brochure download instantly"
+        openedEventTitle="Contact_form_opened_masterplan"
+        submitEventTitle="Contact_form_submit_masterplan"
       />
-      
-      {/* Second Brochure Image with Gradient Blur */}
-      <div className="relative inline-block flex-shrink-0 h-[130px] md:h-[480px] min-w-[260px] md:min-w-[720px] bg-[#1E341E]">
-        <img
-          src="/brochure.png"
-          alt="Master Plan Brochure - Page 2"
-          className="w-full h-full object-contain rounded-[4px] blur-xl"
-        />
-        {/* Gradient Overlay - Creates the fade effect from left to right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1E341E] via-[#1E341E]/50 to-[#1E341E] rounded-[4px]"></div>
-      </div>
-    </div>
-  </div>
-</div>
-        <button className="bg-primary hover:bg-[#9a1751] md:hidden text-white mt-4.5 px-6 md:px-8 py-3 rounded-[4px] font-semibold font-['Urbanist'] text-sm md:text-base transition-colors duration-300 shadow-md flex flex-row items-center gap-2 whitespace-nowrap cursor-pointer"
-            onClick={() => setIsModalOpen(true)}
-          >
-            <img src={'/download.svg'} className='w-5 h-5 object-contain'/>
-            Download Brochure
-          </button>
-
-      </div>
-    </section>
-    <EnquiryModal
-      isOpen={isModalOpen}
-      onClose={() => setIsModalOpen(false)}
-      title="Download Brochure"
-      subtitle="Enter your name and number to get the brochure download instantly"
-      openedEventTitle="Contact_form_opened_masterplan"
-      submitEventTitle="Contact_form_submit_masterplan"
-    />
     </>
-  )
+  );
 }
