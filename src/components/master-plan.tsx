@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function MasterPlan() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
   return (
     <>
       <section id="master-plan" className="py-12 md:py-20 bg-[#F7F1F7]">
@@ -29,25 +30,27 @@ export default function MasterPlan() {
           </div>
 
           {/* Scrollable Brochure Container */}
-          <div className="relative w-full h-[151px] md:h-[534px] bg-[#1E341E] rounded-[4px] overflow-hidden shadow-lg -mr-4 md:mr-0">
-            <div className="absolute inset-0 flex items-center">
+          <div className="relative w-full h-[151px] md:h-[534px] bg-[#1E341E] rounded-[4px] overflow-hidden shadow-lg">
+            <div className="absolute inset-0 flex items-center overflow-hidden">
               {/* Scrollable Row */}
-              <div className="w-full flex flex-row overflow-x-auto scrollbar-hide px-2 md:px-6 py-4 md:py-6 md:gap-6">
+              <div
+                className="flex overflow-x-scroll px-2 md:px-6 py-4 md:py-6 gap-3 md:gap-6 snap-x snap-mandatory"
+                style={{
+                  scrollbarWidth: "none",
+                  msOverflowStyle: "none",
+                }}
+              >
                 {/* First Brochure Image */}
                 <img
                   src="/brochure4.png"
                   alt="Master Plan Brochure - Page 1"
-                  className="inline-block object-contain rounded-[4px] snap-start flex-shrink-0 snap-x snap-mandatory h-[130px] md:h-[480px] min-w-[260px] md:min-w-[720px]"
+                  className="snap-none flex-shrink-0 object-contain rounded-[4px] h-[130px] md:h-[480px] w-auto"
                 />
-
-                
                 <img
                   src="/brochure2.png"
                   alt="Master Plan Brochure - Page 2"
-                  className="inline-block object-contain rounded-[4px] snap-start flex-shrink-0 snap-x snap-mandatory h-[130px] md:h-[480px] min-w-[260px] md:min-w-[720px]"
+                  className="snap-none flex-shrink-0 object-contain rounded-[4px] h-[130px] md:h-[480px] w-auto"
                 />
-
-                
               </div>
             </div>
           </div>
@@ -55,7 +58,7 @@ export default function MasterPlan() {
             className="bg-primary hover:bg-[#9a1751] md:hidden text-white mt-4.5 px-6 md:px-8 py-3 rounded-[4px] font-semibold font-['Urbanist'] text-sm md:text-base transition-colors duration-300 shadow-md flex flex-row items-center gap-2 whitespace-nowrap cursor-pointer"
             onClick={() => setIsModalOpen(true)}
           >
-            <img src={"/download.svg"} className="w-5 h-5 object-contain" />
+            <img src={"/download.svg"} className="w-4.5 h-4.5 object-contain" />
             Download Brochure
           </button>
         </div>
